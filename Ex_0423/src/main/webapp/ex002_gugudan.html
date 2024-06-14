@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			#result{background-color: black;
+					color:white;}
+		</style>
+		
+		<script>
+			window.onload = function(){
+				let selectDan = document.getElementById("selectDan");
+				
+				for(let i = 2; i <= 9; i ++){
+					let opt = document.createElement("option");
+					opt.innerHTML = i + "단";
+					opt.value = i;
+					selectDan.appendChild(opt);
+				}//for
+			}//window()
+			
+			function send(){
+				let dan = document.getElementById("selectDan").value;
+				
+				let result = document.getElementById("result");
+				
+				let str = "";
+				for( let i = 1; i <= 9; i++ ){
+					str = str + dan + "X" + i + "=" + (dan*i) + '<br>';
+				}
+				result.innerHTML = str;
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<select id="selectDan"></select>
+		<input type="button" value="확인" onclick="send();">
+		<div id="result"></div>
+	</body>
+</html>

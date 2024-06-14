@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			#ani{width:100px; height:100px;
+				 background-color:red;
+				 border-radius:0px;
+				 
+				 transition-property:background-color, border-radius;
+				 transition-duration:1s;/*1초에 걸쳐서 변경*/
+				 transition-delay:2s;/*2초 뒤 변경*/
+				 
+				 -webkit-transition-property:background-color, border-radius;
+				 -webkit-transition-duration:1s;
+				 -webkit-transition-delay:2s;
+				 
+				 -moz-transition-property:background-color, border-radius;
+				 -moz-transition-duration:1s;
+				 -moz-transition-delay:2s;
+				 
+				 /*
+				 -webkit- 크롬, 사파리
+				 -moz- 파이어폭스
+				 -o- 오페라브라우저
+				 -ms- 익스플로러
+				 */
+				 }
+				 
+			#ani:hover{ background-color:blue;
+						border-radius:50px;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="ani"></div>
+	</body>
+</html>

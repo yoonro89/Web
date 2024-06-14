@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function check(){
+				let f = document.getElementById("ff");
+				
+				//submit으로는 유효성 체크가 불가하기때문에 아래와 같이 진행한다
+				let age = f.age.value;
+				let pwd = f.pwd.value;
+				
+				if(pwd ==''){
+					alert("비밀번호를 입력하세요");
+					return;
+				}
+				
+				let pat = /^[0-9]*$/;
+				if( !pat.test(age)){
+					alert("나이는 정수입니다");
+					return;
+				}
+				
+				//f.action = "signup.jsp";
+				//1) get방식 : url에 모든 정보가 노출. 보안에 취약 - 속도가 빠름
+				//2) post방식 : url에 파라미터를 노출시키지 않는다. 보안성이 높다 - 속도가 느리다
+				//f.method ="post";
+				f.submit();
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<form id="ff" action="signup.jsp" method="post"><!--전송방식 post or get-->
+			<input name="age"><br>
+			<input name="pwd" type="password"><br>
+			<input type="button" value="확인" onclick="check();">
+		</form>
+	</body>
+</html>

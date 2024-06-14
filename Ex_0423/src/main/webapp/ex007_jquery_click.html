@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$(function(){
+				/*
+				$("#plus").click(function(){
+					
+					let n1 = $("#num1").val();
+					let n2 = $("#num2").val();
+					
+					let result = Number(n1) + Number(n2);
+					$("#result").val(result);
+					
+					
+				});//plus_click
+				*/
+				$("#plus, #minus, #multi, #div").click(function(){
+					calc( $(this) );
+				});
+				
+			});//초기화
+			
+			function calc(btn){
+				//alert(btn.val());
+				let n1 = $("#num1").val();
+				let n2 = $("#num2").val();
+				
+				let result;
+				
+				switch(btn.val()){
+					case "합":
+					result = Number(n1) + Number(n2);
+					break;
+					
+					case "차":
+					result = n1 - n2;
+					break;
+					
+					case "곱":
+					result = n1 * n2;
+					break;
+					
+					case "분":
+					result = n1 / n2;
+					break;
+				}//switch
+				$("#result").val(result);
+				 
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input id="num1" size="5">
+		<input id="num2" size="5"> = 
+		<input id="result" size="5">
+		
+		<br>
+		
+		<input type="button" id="plus" value="합">
+		<input type="button" id="minus" value="차">
+		<input type="button" id="multi" value="곱">
+		<input type="button" id="div" value="분">
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form태그를 사용하여 서버로 값 전달하기 1</title>
+		
+		<script>
+			function check(){
+				//forms : body안에 있는 모든 form태그들을 배열 구조로 가져오는 속성
+				let f = document.forms[0];
+				
+				//form태그에서 name속성이 id로 지정된 태그의 value값 (*form태그 안에선 name속성으로만 접근할 수 있음)
+				let id = f.id.value;
+				let pwd = f.pwd.value;
+				let ta = f.ta.value;
+				let select = f.select.value;
+				let age = f.age.value;
+				
+				alert(id + "/" + pwd + "/" + ta + "/" + select);
+				
+				//form태그의 정보들을 가지고 전환하고 싶은 페이지
+				f.action = "signup.jsp"
+				
+				//form태그의 정보를 가지고 signup.jsp로 데이터를 전송
+				f.submit();
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<!--form1-->
+		<form>
+			<table border="1">
+				<input name="age">
+				
+				<!-- a태그는 form태그의 공식적인 자식요소가 아니므로,
+					 name속성을 넣어도, 파라미터로 전달되지 않는다 -->
+				<a href="#" name="link_a">나는 링크</a>
+				
+				<tr>
+					<th>아이디</th>
+					<td><input name="id" id="id"></td> <!--name과 id의 이름은 같아도 됨-->
+				</tr>
+				
+				<tr>
+					<th>비밀번호</th>
+					<td><input type="password" name="pwd"></td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="폼 체크" onclick="check();">
+					</td>
+				</tr>
+			</table>
+			
+			<textarea name="ta" rows="5" cols="50">여기가 내용 넣는 부분</textarea>
+			
+			<br>
+			
+			<select name="select">
+				<option value="menu1">메뉴1</option>
+				<option value="menu2">메뉴2</option>
+			</select>
+		</form>
+		
+		<!--form2-->
+		<form>
+			
+		</form>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			
+			window.onload = function(){
+				/*출생년도 2000 ~ 2024*/
+				let year = document.getElementById("birth_year");
+				
+				for(let i = 2000; i <= 2024; i++){
+					let option = document.createElement("option");
+					option.innerHTML = i + "년";
+					option.value = i;
+					year.appendChild(option);
+				}//for
+				
+			}//window.onload()
+			
+			let last_day = 31;
+			function check_yoon(){
+				//선택한 년도가 윤년인지 체크
+				let year = document.getElementById("birth_year").value;
+				
+				if( isYoon(year) ){
+					last_day = 29;
+				}else{
+					last_day = 28;
+				}
+				
+				//월 추가
+				let month = document.getElementById("birth_month");
+				
+				//↓년도를 변경할때마다 월에 데이터가 append되면서 누적되지 않도록 초기화를 해줘야 한다
+				//month.innerHTML = "";
+				
+				let n = month.length;
+				while(n > 0){
+					month.remove(0);
+					n--;
+				}
+				
+				for( let i = 1; i <= 12; i++ ){
+					let option = document.createElement("option");
+					option.innerHTML = i + "월";
+					option.value = i;
+					month.appendChild(option);
+				}
+				
+			}//check_yoon()
+			
+			function isYoon(year){
+				
+				//윤년 : 400의 배수이거나, 4의 배수이면서 100의 배수가 아닌 경우
+				let yoon = (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
+				return yoon;
+				
+			}
+			
+			//월을 선택했을 때 호출되는 함수
+			function monthChange(month){
+				
+				let m;
+				switch( Number(month) ){
+					case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+					m = 31;
+					break;
+					
+					case 2:
+					m = last_day;
+					break;
+					
+					case 4: case 6: case 9: case 11:
+					m = 30;
+					break;
+				}//switch
+				
+				let day = document.getElementById("birth_day");
+				
+				day.innerHTML = "";
+				
+				for( let i = 1; i  <= m; i++ ){
+					let option = document.createElement("option");
+					option.innerHTML = i + "일";
+					option.value = i;
+					day.appendChild(option);
+				}
+				
+			}//monthChange
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		YY/MM/DD
+		<select id="birth_year" onchange="check_yoon();">
+			<option>//YY//</option>
+		</select>
+		
+		<select id="birth_month" onchange="monthChange(this.value);">
+			<option>//MM//</option>
+		</select>
+		
+		<select id="birth_day">
+			<option>//DD//</option>
+		</select>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			/*영문을 띄어쓰기 ㅇ벗이 길게 입력하면width를 줘도
+			  영역 밖으로 내용이 빠져나가는데, 이것을 너비에 강제로 맞춰서
+			  엔터를 적용해주는 기능이 word-wrap:break-word이다. */			
+			p{word-wrap:break-word;
+			  width:100px;
+			  padding:10px;
+			  background:#96f;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<p>
+			이 영역에는 매우 긴 영단어가 포함되어 있습니다
+			pneumonoultramicroscopicsilicovolcanoconiosis
+		</p>
+	</body>
+</html>

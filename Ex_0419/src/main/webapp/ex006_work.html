@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>GUGUDAN</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			div{background-color: black;
+				color:aliceblue;}
+			
+			table{padding:5px 8px;
+				  margin:0 10px;}
+			table th{width:80px;}
+			table td{width:150px;}	
+			.tx{border:none;}
+			.cc{width:30px; height:30px; margin:10px;}
+			#logreset{margin:10px;
+					  display: block;}
+			textarea{margin-left:10px;}
+		</style>
+		
+		<script>
+			
+			function bTN(){
+				let dan = document.getElementById("txt").value.trim();
+				let res = "";
+				if( dan == ''){
+					alert("값을 입력하세요");
+					return;
+				}
+				
+				if(dan <= 1 || dan >= 10){
+					alert("가능한 범위가 아닙니다.");
+					return;
+				}
+				
+				for(let i = dan; i <= dan; i++){
+					for(let j = 1; j <= 9; j++){
+						res += i + "x" + j + "=" + i*j + "<br>";
+					}
+				}
+				let div = document.getElementById("div");
+				div.innerHTML = res;
+			}
+			
+			function bTNreset(){
+				let div = document.getElementById("div");
+				let btnName = document.getElementById("disap");
+				if(div.style.display=='block'){
+					div.style = "display:none;";
+					btnName.value = "보이기";
+				}else{
+					div.style = "display:block;";
+					btnName.value = "숨기기";
+				}
+			}
+			
+			
+			let log = "";
+			function calculator(operator){
+				let s1 = Number(document.getElementById("s1").value);
+				let s2 = Number(document.getElementById("s2").value);
+				let result;
+				
+				switch(operator){
+					case '+':
+						result = s1 + s2; 
+						break;
+					case '-':
+						result = s1 - s2; 
+						break;
+					case '*':
+						result = s1 * s2; 
+						break;
+					case '/':
+						result = (s1 / s2).toFixed(2); 
+						break;
+					case 'del':
+						log.innerHTML = "";
+						break;
+					default:
+					break;
+				}
+				
+				document.getElementById("result").value = result;
+				log = document.getElementById("log");
+				
+				if(operator != 'del' ){
+					log.innerHTML += s1 + " " + operator + " " + s2 + " = " + result + '\n';
+				}else{
+					log.innerHTML = "";
+				}
+			}
+			
+		</script>
+	</head>
+	
+	<body>
+		<a>단:</a>
+		<input id="txt" placeholder="몇단?">
+		<input type="button" value="계산하기" onclick="bTN();">
+		<input id="disap" type="button" value="숨기기" onclick="bTNreset();"><hr>
+		
+		<div id="div" style="display:block;"></div>
+		
+		<br>
+		<hr>
+		<br>
+		
+		<table border="2">
+			<tr>
+				<th><h2>수1</h2></th>
+				<td><input class="tx" id="s1" placeholder="first Number"></td>
+			</tr>
+			<tr>
+				<th><h2>수2</h2></th>
+				<td><input class="tx" id="s2" placeholder="second Number"></td>
+			</tr>
+		</table>
+		
+		<br>
+		<input class="cc" type="button" value="+" onclick="calculator('+');">
+		<input class="cc" type="button" value="-" onclick="calculator('-');">
+		<input class="cc" type="button" value="*" onclick="calculator('*');">
+		<input class="cc" type="button" value="/" onclick="calculator('/');"><br>
+		
+		<table border="2">
+			<tr>
+				<th><h2>결과</h2></th>
+				<td><input class="tx" id="result" value="" placeholder="RESULT"></td>
+			</tr>
+		</table>
+		
+		<input id="logreset" type="button" value="로그비우기" onclick="calculator('del');">
+		<textarea id="log" cols="33" rows="10"></textarea>
+	</body>
+</html>
+
+
+
+
+
+
+
+

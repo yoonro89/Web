@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$(function(){
+				//^= : ~로 시작하는
+				$("div[id^='vi']").css("background", "blue");
+				
+				//*= : 해당 문자를 포함하는 요소
+				$("div[id*='tent']").css("background", "pink");
+				
+				//$= : 해당 값으로 끝나는 요소
+				$("div[id$='1']").css("background", "#aaf");
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="content-1">속성에 따른 스타일시트 적용</div>
+		<div id="content-2">속성에 따른 스타일시트 적용</div>
+		<div id="view-1">속성에 따른 스타일시트 적용</div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>일부분 지정태그(span)의 css적용</title>
+		
+		<style>
+			.box{color: red;}
+			span{color: gray;}
+			/* '공백은 특정 태그의 자식태그를 찾으시오'의 의미 */
+			div.box h2 span.s_blue{color: blue;}
+			.s_green{color: green}
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<div class="box">
+			<h2><span>타요타요</span> 타요타요 개구쟁이 꼬마버스</h2>
+			
+			<div class="box">
+				<h2>꼬불꼬불 <span class="s_blue">울퉁불퉁</span> 험한 길도 두렵지않아</h2>
+			</div>
+			
+		</div>
+		
+		<h2><span class="s_green">어두컴컴</span> 빛이 없는 긴 터널도</h2>
+		
+	</body>
+</html>

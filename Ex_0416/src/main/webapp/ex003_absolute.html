@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>position:absolute</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			.box{margin:40px;
+				 width:250px;
+				 border:1px solid red;
+				 position:relative;}
+				 
+			p{width:130px;
+			  height:80px;
+			  padding:10px;
+			  color:#fff;}
+			  
+			.red{background-color:red;} /*absolute를 사용하더라도 상위에 해당하는 블록을 침범할 수 없다*/
+			
+			/*left, top등의 속성을 사용하면 .box를 부모로 인지하지 못하고
+			  기분이 body로 바뀐다
+			  이를 해결하기 위해 부모인 .box에서 position:relative속성을 추가하여
+			  자식으로 인지하도록 설정해야 한다*/
+			.blue{	background-color:blue;
+					position:absolute;
+					left:50px; top:30px;}
+			
+			.green{background-color:green;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div class="box">
+			<p class="red">박스1</p>
+			<p class="blue">박스2</p>
+			<p class="green">박스3</p>
+		</div>
+	</body>
+</html>

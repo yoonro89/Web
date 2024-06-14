@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			let num1 = 30;
+			let num2 = 20;
+			num1 <= num2 ? document.write("참") : document.write("거짓");
+			
+			document.write("<hr>");
+			
+			let res = num1 <= num2 ? "참" : false;
+			document.write(res);
+			
+			document.write("<hr>");
+			
+			/*타입이 따로 정해져 있지 않은 document... 코드는
+			res등의 변수에 대입될 수 없으므로 '어떤 자료형인지 알 수 없다'의 의미인 undefined를 가져온다.*/
+			res = num1 <= num2 ? 100 : document.write("나는 거짓");
+			document.write(res);
+			
+			//alert() : 경고창
+			num1 <= num2 ? alert("num1이 작습니다") : alert("num2이 큽니다");
+			
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

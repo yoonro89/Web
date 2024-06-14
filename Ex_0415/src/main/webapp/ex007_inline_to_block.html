@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>인라인요소 -> 블록요소</title>
+		
+		<style>
+			li{ list-style:none; }
+			
+			img{display:block;}
+			span{display:block;}
+			a{display:block;
+			  border:1px solid black;
+			  padding:10px 0;}
+			  /*인라인요소의 경우 영역 침범이라는 개념이 존재하지 않아 
+			  강제로 블록요소의 성질을 부여하여 조절하기도 한다(특히 a태그에 많이 사용)*/
+			  
+			a{text-decoration:none;}
+			/*외워둘것 ↑
+			line-through : del처럼 텍스트 위에 줄이 그어진 모양*/
+		</style>
+		
+	</head>
+	
+	<body>
+		<ul>
+			<li>
+				<img src="image/acid2Test.jpg" alt="웃는얼굴">
+				<span>웃는이미지</span>
+				<span>어때?</span>
+				<a href="#">이거 눌러도 쥐뿔도 없음</a>
+			</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			table{margin:0 auto;}
+			
+			caption{text-align:center;
+					font-weight:bold;
+					font-size:24px;
+					padding:5px;}
+					
+			.head{text-align:center;
+				  color:#fff;
+				  background-color:#00f;}
+			.head > td{	width:160px; height:30px;
+				  		padding:15px;
+				  		border-bottom:4px solid black;}	  
+				  
+			.body{text-align:center;
+				  background-color: lightgoldenrodyellow;}
+			.body > td{ width:160px; height:130px;}
+			.body > td:nth-child(1){font-weight:bold;}
+			
+			.body > td.text{vertical-align:top;
+							text-align:left;
+							padding:10px;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<table border="1">
+			<caption>업종별 모범거래기준 주요 내용 비교</caption>
+			<tr class="head">
+				<td>구분</td>
+				<td>제빵(4월)</td>
+				<td>피자(7월)</td>
+				<td>치킨(7월)</td>
+				<td>커피(11월)</td>
+			</tr>
+			
+			<tr class="body">
+				<td>영업지역</td>
+				<td>500m</td>
+				<td>1,500m</td>
+				<td>800m</td>
+				<td>500m</td>
+			</tr>
+			
+			<tr class="body">
+				<td>광고</td>
+				<td class="text">관련내용없음<br>(분쟁없음)</td>
+				<td class="text">총 광고비 사전동의<br>광고내역 송부 등</td>
+				<td class="text">총 광고비 사전동의<br>광고내역 송부 등</td>
+				<td class="text">관련내용 없음<br>(분쟁없음)</td>
+			</tr>
+			
+			<tr class="body">
+				<td>대금지급</td>
+				<td class="text">관련내용 없음<br>(분쟁없음)</td>
+				<td class="text">관련내용 없음<br>(분쟁없음)</td>
+				<td class="text">관련내용 없음</td>
+				<td class="text">월1~2회 정산<br>정산기한 최소 7일 보장</td>
+			</tr>
+		</table>
+	</body>
+</html>

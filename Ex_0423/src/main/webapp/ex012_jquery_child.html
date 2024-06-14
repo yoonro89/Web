@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$(function(){
+				
+				$(".movie").css("border", "2px solid red");
+				
+				$(".movie").click(function(){
+					//.find()를 통해 자신의 하위요소로 접근이 가능
+					let msg = $(this).find("p").html();
+					alert(msg);
+				});
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="box">
+			<ul>
+				<li>
+					<div class="movie" id="movie1">
+						<p>범죄도시4</p>
+					</div>
+				</li>
+				
+				<li>
+					<div class="movie" id="movie2">
+						<p>파묘</p>
+					</div>
+				</li>
+				
+				<li>
+					<div class="movie" id="movie3">
+						<p>쿵푸팬더4</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

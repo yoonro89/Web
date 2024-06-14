@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>기본메뉴 간단 예제</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			li{list-style:none;
+			   float:left;}
+			   
+			.menu{overflow:hidden;}
+			
+			.menu > li > a{	border:1px solid black;
+							width:50px;}
+							
+			.menu li a{	display:block;
+						padding:10px;
+						text-decoration:none;}
+			
+			.submenu{display:none;}
+			
+			.submenu li{border:1px solid black;}
+			
+			.menu li:hover ul.submenu{ display:block;}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<ul class="menu">
+			
+			<li>
+				<a href="#">메뉴판</a>
+				
+				<ul class="submenu">
+					<li><a href="#">짜장</a></li>
+					<li><a href="#">짬뽕</a></li>
+					<li><a href="#">볶음밥</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</body>
+</html>

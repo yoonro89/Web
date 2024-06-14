@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			let n1 = 10;
+			let n2 = 20;
+			
+			document.write(++n1 + "<br>");
+			document.write(n2-- + "<br>");
+			
+			document.write('<hr>');
+			
+			let gender = prompt("당신의 성별?");
+			let age = prompt("나이?", 0);
+			let result = age >= 20 && age <=30 && gender == '여자'; //equires를 사용하지 X
+			document.write(result + "<br>")
+			
+			result = age >= 20;
+			document.write(result +"<br>");
+			
+			result = age - 10; 
+			document.write(result);
+			
+			//prompt로부터 넘겨받은 데이터가 숫자형식이라면
+			//부등호, -, *, /, % 의 연산은 문제없이 처리된다.
+			//그러나 넘겨받은 데이터가 문장형식이라면
+			//-, * 등의 연산자는 사용할 수 없다.
+			 
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

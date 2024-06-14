@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>jquery_select생년월일입력</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	
+	<script>
+		$(function(){
+			let now = new Date();
+			let year = now.getFullYear();
+			let mon = (now.getMonth() + 1) > 9 ? ''+(now.getMonth()+1) : '0'+(now.getMonth() + 1);
+			let day = (now.getDate()) > 9 ? ''+(now.getDate()) : '0'+(now.getDate());
+			
+			//년
+			for(let i = 1900; i <= year; i++){
+				$("#year").append('<option value="'+ i +'">' + i + '년</option>');
+			}
+			
+			//월
+			for(let i = 1; i <= 12; i++){
+				let mm = i > 9 ? i :"0" + i;
+				$("#month").append('<option value="'+ mm +'">' + mm + '월</option>');
+			}
+			
+			$("#year > option[value=" + year + "]").attr("selected", "ture");
+			$("#year > option[value=" + mon + "]").attr("selected", "ture");
+			
+			//일
+			let YY = $("#year").value;
+			let MM = $("#month").value;
+			//윤년
+			if( YY % 4 == 0 && YY % 100 != 0 || YY % 400 == 0) {
+				//1 ~ 7월, 2월 제외
+				if(MM <= 7 && MM != 2){
+					
+					if(MM % 2 == 0){
+						for(let i = 1; i <= 30; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					} else {
+						for(let i = 1; i <= 31; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					}
+				//8 ~ 12월, 2월 제외
+				}else if(MM >= 8 && MM != 2){
+					
+					if(MM % 2 == 0){
+						for(let i = 1; i <= 31; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					} else {
+						for(let i = 1; i <= 30; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					}
+					
+				//2월	
+				} else {
+					for(let i = 1; i <= 29; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+				}
+			
+			//평년
+			} else {
+				//1 ~ 7월, 2월 제외
+				if(MM <= 7 && MM != 2){
+					
+					if(MM % 2 == 0){
+						for(let i = 1; i <= 30; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					} else {
+						for(let i = 1; i <= 31; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					}
+				//8 ~ 12월, 2월 제외
+				}else if(MM >= 8 && MM != 2){
+					
+					if(MM % 2 == 0){
+						for(let i = 1; i <= 31; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					} else {
+						for(let i = 1; i <= 30; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+					}
+					
+				//2월	
+				} else {
+					for(let i = 1; i <= 28; i++){
+							let dd = i > 9 ? i : "0" + i;
+							$("#day").append('<option value="'+ dd +'">' + dd + '일</option>'); }
+				}
+			};
+			
+			$("#year > option[value=" + day + "]").attr("selected", "ture");
+			
+		});
+	</script>
+	</head>
+	
+	<body>
+		생년월일
+		<select id="year"></select>
+		<select id="month"></select>
+		<select id="day"></select>
+	</body>
+</html>

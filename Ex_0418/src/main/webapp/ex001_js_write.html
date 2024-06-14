@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트의 출력구조</title>
+		
+		<script>
+			/**/
+			//자바스크립트를 사용하기 위한 영역
+			
+			//document(Document Object Model : DOM객체) -> body
+			document.write("hello javascript<br>");
+			document.write('hello javascript' + '<br>');
+			document.write(1 + 1 + "hello" + 1 + 1 + "<br>");	
+			document.write('안녕', 100+1, "<br>");	
+			document.write('hello' + 'world', 'java', "<br>");
+			document.write(1, 1+1, '<br>');
+			
+			//출력시 ""와''의 구분이 없어 자바 보다 활용도가 용이하다 
+			//'자바'의 정석
+			document.write("'자바'의 정석<br>");
+			//"자바"의 정석
+			document.write('"자바"의 정석<br>');
+			//"자바"의'정석'
+			document.write('"자바"의',"'정석'<br>");
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		나는 body입니다
+	</body>
+</html>

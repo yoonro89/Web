@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>GUGUDAN</title>
+		
+		<style>
+			hr{width:300px; margin:10px 0;}
+			#disp{width:280px; height:280px; padding:10px;
+				  background-color: black; color:white;}
+		</style>
+		
+		<script>
+			
+			function calc(){
+				let dan = document.getElementById("dan").value;
+				
+				//정규식
+				//특정한 규칙을 가진 문자열의 집합
+				
+				//정수를 판단하는 정규식
+				let regex = /^[0-9]*$/;
+				if( !regex.test(dan) || dan.trim() == ''){ //입력받은 dan이 정수구조가 아닌 경우
+					alert("정수만 입력하세요");
+					return;
+				}
+				
+				let str = "";
+				
+				for(let i = 1; i <= 9; i++){
+					str = str + dan + " X " + i + " = " + (dan*i) + "<br>";
+				}//for
+				
+				let disp = document.getElementById("disp");
+				disp.innerHTML = str;
+				
+				
+				
+			}//calc()
+			
+			let b_show = true;
+			function show(){
+				b_show = !b_show;
+				
+				let btn_show = document.getElementById("bt_show");
+				
+				btn_show.value = b_show ? "숨기기" : "보이기";
+				
+				document.getElementById("disp").style.display =
+				b_show ? 'block' : "none";
+				
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		단 : <input id="dan" placeholder="몇단?">
+		<input type="button" value="계산하기" onclick="calc();">
+		<input type="button" value="숨기기" id="bt_show" onclick="show();">
+		
+		<hr>
+		
+		<div id="disp"></div>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+

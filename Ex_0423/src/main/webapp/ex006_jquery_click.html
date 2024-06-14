@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+					alert("버튼1 클릭됨");
+				});
+				
+				$("#btn2").click(function(){
+					//let msg = $("#msg").val();
+					//alert(msg);
+					
+					$("#msg").val("입력상자에 값 넣음");
+					
+					//$(this) : 현재 이벤트를 발생시킨 btn2객체
+					$(this).val("내용바뀜");
+					
+				});
+				
+				//번튼에게 감지자 참조
+				$("#btn3").click(bt3_click);
+				$("#btn4").click(bt4_click);
+			});
+			
+			function bt3_click(){
+				alert("버튼3번 클릭됨")
+			}
+			
+			let bt4_click = function(){
+				alert("버튼4번 클릭됨");
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input id="msg" placeholder="메시지를 입력하세요"><br>
+		<input type="button" id="btn1" value="버튼1">
+		<input type="button" id="btn2" value="입력된 메시지">
+		<input type="button" id="btn3" value="test">
+		<input type="button" id="btn4" value="test2">
+		
+	</body>
+</html>

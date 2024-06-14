@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<!-- viewport : 구동하는 기기 해상도를 찾을 수  있도록 한다
+			 initial-scale : 페이지 로딩시 줌 배율로 1.0(원본배율)적용 -->
+		<mata name="viewport" content="width=device-width, initial-scale=1.0">
+			
+		<style>
+			/*화면너비 0 ~ 800px */
+			@media screen and (max-width:800px){
+				html{
+					background:red;
+					color:white;
+				}
+			}
+
+			/*화면너비 801 ~ 950px */
+			@media screen and (min-width:801px) and (max-width:950px){
+				html{
+					background:green;
+					color:white;
+				}
+			}
+
+			/*화면너비 951px ~  */
+			@media screen and (min-width:951px){
+				html{
+					background:blue;
+					color:white;
+				}
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		<p>나는 반응형 웹의 기본을 보고 있습니다</p>
+	</body>
+</html>

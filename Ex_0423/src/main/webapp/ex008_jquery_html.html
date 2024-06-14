@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$( function(){
+				$("#btn1").click(function(){
+					let aa = $("#aa").html();
+					console.log("aa.html : " + aa);
+					
+					$("#aa").html("<h2>곧 점심시간</h2>");
+				});
+				
+				$("#btn2").click( function(){
+					$("#bb").html("");
+				} );
+				
+				$(".btn3").click( function(){
+					$("p").html("오늘 상담있대요. 단체톡 확인좀");//태그에 접근할때
+				} );
+				
+			} );
+		</script>
+		
+	</head>
+	
+	<body>
+		<input type="button" value="btn1" id="btn1">
+		<input type="button" value="btn2" id="btn2">
+		<input type="button" value="btn3" class="btn3">
+		
+		<div id="aa">jQuery</div>
+		<div id="bb">noJam</div>
+		<p>제이쿼리 연습중</p>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>자바스크립트 함수</title>
+		
+		<script>
+			//자바스크립트의 함수(메서드)
+			function greet(){
+				alert("버튼1 누름");
+			}
+			
+			function greet2(s){/*자바와 달리 변수타입을 규정할 필요가 없으므로 생략이 가능하다*/
+				//alert(s);
+				
+				//body에 존재하는 특정 요소를 Id로 검색
+				let a = document.getElementById("myInput");
+				a.value = s;
+				
+				
+				//let btn = document.getElementById("btn2");		←태그형태로 받아옴
+				//alert(btn.value);
+				let btn = document.getElementById("btn2").value;//	←태그 안의 요소 value값
+				alert(btn);
+			}
+			//함수 밖에서 요소를 검색하는 것은 불가능
+			//let a = document.getElementById("myInput");
+			  
+			function m_set(){
+				let myP = document.getElementById("myP");
+				myP.style.color = "red";
+			}
+			
+			function send(){
+				let txt = document.getElementById("txt").value;
+				let res = document.getElementById("res");
+				
+				//무결성(유효성)체크
+				if( txt.trim() == '' ){
+					alert("값을 입력하세요");
+					return;
+				}
+				
+				res.value = txt;
+				
+				let div = document.getElementById("div");
+				div.innerHTML = txt;
+			}
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		<input type="button" value="버튼1" onclick="greet();">
+		<!--세미콜론 유무는 아무 상관 없음-->
+		
+		<input id="btn2" type="button" value="버튼2" onclick="greet2('하이');"><br>
+		<!--값을 함수로 넘길 수 있다-->
+		
+		<input id="myInput" size="5" value="기본값">
+		<!--타입이 text인 경우 생략 가능-->
+		
+		<p id="myP">안녕하세요</p>
+		<input type="button" value="버튼3" onclick="m_set();">
+		
+		<hr>
+		
+		<input id="txt" size="5" placeholder="input data">
+		<input type="button" value="확인" onclick="send();"><br>
+		<input id="res">
+		<div id="div"></div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

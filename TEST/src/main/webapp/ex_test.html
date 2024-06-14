@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML textarea tag</title>
+		
+		<style>
+			.header{border:1px solid black;}
+			
+			a{text-align: center;
+			  vertical-align:top;}
+			
+			#ii2{margin-left:20px;}
+			
+			.box{padding:15px;}
+			
+			table{width:auto;}
+			
+			th{ background-color:darkorange;
+				color:white;}
+			
+			.f1{width:50px;}
+			.f2{width:500px;}
+			.f3{border:1px double black;
+				background-color:lightslategray;}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="header">
+			<div class="box">
+				<a>제목&nbsp;&nbsp;&nbsp;</a>
+				<input type="text" name="title" value="제목을 입력하시오.">
+				<br>
+				<br>
+				<a>내용&nbsp;&nbsp;&nbsp;</a>
+				<textarea type="text" name="content" cols="22" rows="5" readonly="내용을 입력하시오."></textarea>
+				</input>
+				<br>
+				<br>
+				<a>첨부파일&nbsp;&nbsp;&nbsp;</a>
+				<input type="file">
+				<br>
+					<input name="ii2" type="submit" value="작성하기">
+			</div>
+		</div>
+		<br>
+		<br>
+		<hr>
+		<br>
+		<br>
+		<div class="footer">
+			<table border="1">
+				<tr>
+					<th class="f1">번호</th>
+					<th colspan="2">제목</th>
+					<th>작성자</th>
+					<th>작성일</th>
+					<th colspan="2">조회수</th>
+				</tr>
+				
+				<tr>
+					<td class="f1">9</td>
+					<td class="f2">공지사항 제목9</td>
+					<td class="f3">바로가기</td>
+					<td>user01</td>
+					<td>2021-03-29</td>
+					<td>34</td>
+				</tr>
+				
+				<tr>
+					<td class="f1">6</td>
+					<td class="f2">공지사항 제목6</td>
+					<td class="f3">바로가기</td>
+					<td>answ445</td>
+					<td>2021-03-12</td>
+					<td>67</td>
+				</tr>
+				
+				<tr>
+					<td class="f1">3</td>
+					<td class="f2">공지사항 제목3</td>
+					<td class="f3">바로가기</td>
+					<td>testg12</td>
+					<td>2021-03-01</td>
+					<td>98</td>
+				</tr>
+				
+				<tr>
+					<td class="f1">2</td>
+					<td class="f2">공지사항 제목2</td>
+					<td class="f3">바로가기</td>
+					<td>palwe3</td>
+					<td>2021-01-02</td>
+					<td>85</td>
+				</tr>
+				
+				<tr>
+					<td class="f1">1</td>
+					<td class="f2">공지사항 제목1</td>
+					<td class="f3">바로가기</td>
+					<td>xml23</td>
+					<td>2020-12-24</td>
+					<td>124</td>
+				</tr>
+				
+				<tr>
+					<th colspan="4">전체공지사항 갯수</th>
+					<th colspan="2">5개</th>
+				</tr>
+				
+			</table>
+		</div>
+	</body>
+</html>

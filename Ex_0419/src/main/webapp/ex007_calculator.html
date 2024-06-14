@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			table{border-collapse:collapse;}
+			input[type=text]{border-style:none;
+							 outline:none;}/*클릭시에도 테두리x*/
+		</style>
+		
+		<script>
+			function calc(op){
+				
+				let su1 = document.getElementById("su1").value.trim();
+				let su2 = document.getElementById("su2").value.trim();
+			
+				//정수만 입력 가능한지에 대한 유효성 체크
+				let pattern = /^[0-9]*$/;
+				if( !pattern.test(su1) || !pattern.test(su2) || su1 == '' || su2 == ''){
+					alert("값은 정수로만 입력하세요");
+					return;
+				}
+				
+				let res;//결과를 담을 변수
+				
+				switch( op ){
+					case '+':
+					res = Number(su1) + Number(su2);
+					break;
+					case '-':
+					res = su1 - su2;
+					break;
+					case '*':
+					res = su1 * su2;
+					break;
+					case '/':
+					res = su1 / su2;
+					res = (su2 == 0) ? 0 : (su1/su2).toFixed(2);
+					break;
+				}//switch
+				
+				let result = document.getElementById("result");
+				result.value = res;
+				
+			
+			}//calc
+		</script>
+		
+	</head>
+	
+	<body>
+		<table border="1">
+			<tr>
+				<th>수1</th>
+				<td><input id = "su1" type="text"></td>
+			</tr>
+			
+			<tr>
+				<th>수2</th>
+				<td><input id = "su2" type="text"></td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" value="+" onclick="calc('+');">
+					<input type="button" value="-" onclick="calc('-');">
+					<input type="button" value="*" onclick="calc('*');">
+					<input type="button" value="/" onclick="calc('/');">
+				</td>
+			</tr>
+			
+			<tr>
+				<th>결과</th>
+				<td><input id="result" type="text" readonly="readonly"></td>
+			</tr>
+		</table>
+	</body>
+</html>

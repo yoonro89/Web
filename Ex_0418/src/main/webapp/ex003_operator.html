@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>연산자</title>
+		
+		<script>
+			let a = 10;
+			let b = 3;
+			let result;
+			
+			result = a + b;
+			document.write(result, '<br>');
+			
+			result = a / 3;
+			document.write(result + '<br>');
+			
+			result = a / 3;
+			document.write(result.toFixed(1) + "<br>" ); //소수점 자리수 출력제어
+			
+			result = a % b;
+			document.write(result);
+			
+			document.write('<hr>');
+			
+			result = a > b;
+			document.write(result + '<br>');
+			
+			result = a == b;
+			document.write(result + '<br>');
+			
+			result = a != b;
+			document.write(result + "<br>");
+			
+			document.write("<hr>");
+			
+			a += b;
+			document.write(a + '<br>');
+			
+			a = 10;
+			a /= b;
+			document.write(a + "<br>");
+			
+			document.write('<hr>');
+			
+			//과수원이 있다.
+			//과수원에서 하루에 생산되는 과일의 갯수는
+			//사과 5개, 오렌지 10개, 배 3개이다.
+			//과수원에서 하루에 생산되는 과일의 총 개수를 출력하고
+			//시간당 전체 과일의 평균 생상개수를 출력
+			//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+			//하루생산량 : 18개
+			//시간당 생산량 : 0.75개
+			
+			let app = 5;
+			let ora = 10;
+			let pea = 3;
+			let tal;
+			let avg;
+			
+			tal = app + ora + pea;
+			avg = tal/24;
+			
+			document.write('하루생산량 : ' + tal + '개<br>');
+			document.write("시간당 생산량 : " + avg.toFixed(2) + '개<br>');
+			
+			
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+	</body>
+</html>

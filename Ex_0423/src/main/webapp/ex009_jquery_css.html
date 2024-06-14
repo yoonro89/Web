@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$(function(){
+				$("#pwd").css("border", "1px solid red");
+				$("#id").css("border", "1px solid blue");
+				
+				$(".row").css("border", "1px dotted green")
+						 .css("background", "pink")
+						 .css("color", "#fff");
+						 
+				$("input[type='button']").css("border", "1px dotted green")
+										 .css("background", "pink")
+										 .css("color", "#fff");
+			});
+		</script>
+		
+	</head>
+	
+	<body>
+		<table border="1">
+			<tr>
+				<th class="row">ID</th>
+				<td>
+					<input id="id">
+				</td>
+			</tr>
+			
+			<tr>
+				<th class="row">PWD</th>
+				<td>
+					<input id="pwd" type="password">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" value="로그인">
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

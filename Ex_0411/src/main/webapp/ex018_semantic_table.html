@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>시멘틱 태그를 이용한 테이블</title>
+	</head>
+	
+	<body>
+		<table border="1">
+			<!-- 시멘틱 태그 : 특정 태그의 의미를 브라우저에서 직접적으로 인지하여
+				 목적을 갖고 실행되는 태그 -->
+				 
+			<caption>테블릿PC와 스마트폰</caption>
+			
+			<!-- 시멘틱 테이블로 묶을 경우 머리-몸-발의 순서 배치가 자유롭다
+				 보여지는 것과 음성낭독기가 읽어주는 결과값의 차이를 만들 수 있다 -->
+			<thead>
+				<tr>
+					<th>구분</th>
+					<th>테블릿</th>
+					<th>스마트폰</th>
+				</tr>
+			</thead>
+			
+			<tfoot>
+				<tr>
+					<th>총 판매량</th>
+					<td>5만대</td>
+					<td>16만대</td>
+				</tr>
+			</tfoot>
+			
+			<tbody>
+				<tr>
+					<th>상반기 판매량</th>
+					<td>2만대</td>
+					<td>5만대</td>
+				</tr>
+				
+				<tr>
+					<th>하반기 판매량</th>
+					<td>3만대</td>
+					<td>11만대</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

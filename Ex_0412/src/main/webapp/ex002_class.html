@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>클래스 접근을 통한 css정의</title>
+		
+		<style>
+			/*스타일시트 내부에서의 주석*/
+			/*text2라는 클래스를 가진 태그를 검색, 클래스 호출은 '.'이다*/
+			/*.text2{color: #f00;}*/
+			.text{color: #00f;}
+			
+			/*h2태그 중 text2라는 클래스를 가진 태그에게만 속성을 적용*/
+			h2.text2{color: #f00;}
+			
+			p.text2{color: #0f0;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<!-- class는 디자인'만'을 위한 식별자로써 중복된 이름을 허용한다 -->
+		<h2 class="text">클래스 연습</h2>
+		<h2 class="text2">클래스 연습2</h2>
+		
+		<p class="text2">개구쟁이 뽀로로</p>
+		<p class="text">장난꾸러기 크롱</p>
+		
+	</body>
+</html>

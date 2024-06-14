@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<script>
+			$(function(){
+				$("a[target]").css("background", "#ccc");
+				
+				$("input[size != 20]").css("border", "1px solid red");
+				
+				//= : 정확하게 일치하는 것
+				//~=: 공백을 제거하고 내용이 일치하는 것
+				//$("a[href='https://www.naver.com']").css("background", "pink");
+				$("a[href~='https://www.naver.com']").css("background", "pink");
+			});
+		</script>
+	</head>
+	
+	<body>
+		<input size="10">
+		<input size="20">
+		<br>
+		<a href="	https://www.naver.com	">네이버</a>
+		<a href="https://www.naver.com" target="_blank">네이버</a>
+	</body>
+</html>

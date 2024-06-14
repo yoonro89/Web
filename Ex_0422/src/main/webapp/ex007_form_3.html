@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<script>
+			function check(){
+				//name="ff"로 지정된 form태그를 바로 가져오는 형태
+				let f = document.ff;
+				
+				f.method = "get";
+				f.action = "login.jsp"
+				f.submit();
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<form name="ff">
+			<input name="my_name"><br>
+			<input name="my_age"><br>
+			<input type="button" value="확인" onclick="check();">
+		</form>
+		
+	</body>
+</html>

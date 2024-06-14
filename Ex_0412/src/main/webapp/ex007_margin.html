@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>margin(바깥쪽 여백)</title>
+		
+		<style>
+			p{ border:3px dashed blue;}
+			
+			div{ border:5px solid red;}
+				 
+		.box1{margin:20px;}	/*상하좌우*/
+		.box2{margin:20px 50px;}/*상하, 좌우*/
+		.box3{margin:30px 50px 60px;}/*상, 좌우, 하	사용하는 언어마다 다르지만 HTML에선 여백 수치가 높은쪽으로 표현됨(낮은쪽이 묻힘)*/
+		.box4{margin:20px 30px 50px 70px;}/*상, 우, 하, 좌 시계방향*/ 
+		</style>
+		
+	</head>
+	
+	<body>
+		<p>나는 p</p>
+		<p>나는 p</p>
+		
+		<div class="box1">margin속성 연습</div>
+		<div class="box2">margin속성 연습</div>
+		<div class="box3">margin속성 연습</div>
+		<div class="box4">margin속성 연습</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			.menu{background-color: #333;
+				  overflow:hidden;}
+				  
+			.menu > li{float:left;}
+			
+			.menu li a{ display:block;
+						padding:10px;
+						color:#fff;}
+						
+			.menu li a:hover{background-color:#555;}
+			
+			.sub{position:absolute;
+				 background-color:#555;
+				 display:none;}
+			
+			.sub li a:hover{background-color:#f00;}
+			
+			.menu li:hover .sub{display:block;}
+		</style>
+	</head>
+	
+	<body>
+		<ul class="menu">
+			<li>
+				<a href="#">메뉴1</a>
+				<ul class="sub">
+					<li><a href="#">서브메뉴1-1</a></li>
+					<li><a href="#">서브메뉴1-2</a></li>
+					<li><a href="#">서브메뉴1-3</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">메뉴2</a>
+				<ul class="sub">
+					<li><a href="#">서브메뉴2-1</a></li>
+					<li><a href="#">서브메뉴2-2</a></li>
+					<li><a href="#">서브메뉴2-3</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="#">메뉴3</a>
+				<ul class="sub">
+					<li><a href="#">서브메뉴3-1</a></li>
+					<li><a href="#">서브메뉴3-2</a></li>
+					<li><a href="#">서브메뉴3-3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

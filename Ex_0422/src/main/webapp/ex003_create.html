@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>동적 태그 관리</title>
+		
+		<script>
+			
+			//브라우저 시작과 함께 자동으로 호출되는 영역
+			window.onload = function(){
+				//새로운 div태그 생성
+				let newDiv = document.createElement("div");
+				let main_div = document.getElementById("main_div");
+				
+				//새로 생성한 div에 텍스트 추가
+				newDiv.innerHTML = "안녕";
+				
+				//newDiv요소에 스타일 적용
+				newDiv.style.backgroundColor = "lightblue";
+				newDiv.style.padding = "20px";
+				newDiv.style.margin = "10px";
+				newDiv.style.borderRadius = "5px";
+				
+				//main_div태그에 newDiv를 추가
+				main_div.appendChild(newDiv);
+				
+			}
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		<div id="main_div">
+			메인 DIV
+		</div>
+	</body>
+</html>

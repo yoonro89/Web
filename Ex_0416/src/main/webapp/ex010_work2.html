@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			#header{position:relative;
+					background-color:black;
+					width:320px; height:50px;
+					margin:2px auto 0 2px;}
+			
+			a{color:white;}
+			p{color:white;}
+			
+			#m1{position:absolute;
+				left:10px; top:15px;}
+			#m2{position:absolute;
+				left:100px; top:15px;}
+			#m3{position:absolute;
+				left:190px; top:15px;}
+				 
+			.menu{overflow:hidden;}
+			.menu1 li p{display:block;
+						padding:10px;
+						width:100;}
+			.m_sub{display:none;}
+			.m_sub li{background-color: black;
+					  padding:10px;
+					  width:100px;}
+			.menu li:hover ul.m_sub{display:block;}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="header">
+			<div id="m1">
+				<ul class="menu">
+					<li>
+						<a href="#">메뉴 1</a>
+						<ul class="m_sub">
+							<li><p>서브메뉴 1-1</p></li>
+							<li><p>서브메뉴 1-2</p></li>
+							<li><p>서브메뉴 1-3</p></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="m2">
+				<ul class="menu">
+					<li>
+						<a href="#">메뉴 2</a>
+						<ul class="m_sub">
+							<li><p>서브메뉴 2-1</p></li>
+							<li><p>서브메뉴 2-2</p></li>
+							<li><p>서브메뉴 2-3</p></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="m3">
+				<ul class="menu">
+					<li>
+						<a href="#">메뉴 3</a>
+						<ul class="m_sub">
+							<li><p>서브메뉴 3-1</p></li>
+							<li><p>서브메뉴 3-2</p></li>
+							<li><p>서브메뉴 3-3</p></li>
+						</ul>
+					</li>
+				</ul>
+			</div>							
+		</div>
+	</body>
+</html>

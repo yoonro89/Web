@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="css/reset.css">
+		
+		<style>
+			/*공통설정 및 휴대폰 전용 스타일*/
+			@media screen and (max-width:600px){
+				html{
+					#header{
+						text-align:center;
+						padding-left:6%;
+						background-color:#100066;
+					}
+					
+					#header h1{
+						padding:5% 0;
+						margin:0 0 5%;
+						color:#fff;
+					}
+					
+					#nav{ background-color: rgb(0, 128, 255); }
+					
+					#nav ul li{
+						width:100%;
+						text-align:center;
+						color:#fff;
+						border-bottom:1px solid #fff;
+					}
+					
+					#contents{width:80%;
+							  margin:2% auto;}
+					
+					.contents_menu > div{
+						height:130px;
+						background-color: #0cf;
+						padding:15px 0 0 20px;
+						margin-bottom:3px;}
+					
+					#footer{width:100%;
+							text-align:center;}
+					
+				}/*html*/
+			}/*@media screen*/
+			
+			/*태블릿 전용 스타일*/
+			@media screen and (min-width:601px) and (max-width:800px){
+				
+				html{
+					#header{
+						text-align:center;
+						padding-left:6%;
+						background-color:#100066;
+					}
+					
+					#header h1{
+						padding:5% 0;
+						margin:0 0 2%;
+						color:#fff;
+					}
+					
+					#nav{ background-color: rgb(0, 128, 255); }
+					#nav ul li{
+						width:100%;
+						text-align:center;
+						color:#fff;
+						padding:5px 0;
+					}
+					
+					#nav ul{overflow:hidden;}
+					#nav ul li{float:left; width:30%;}
+					
+					#contents_menu{overflow:hidden;}
+					.contents_menu > div{
+						height:130px;
+						background-color: #0cf;
+						padding:15px 0 0 20px;
+						margin-bottom:3px;
+						width:45%;
+						margin-top:10px;
+						float:left;}
+						
+					#contents_menu1{margin-right:5px;
+									margin-left:10px;}
+					
+				}/*html*/
+				
+			}/*@media screen*/
+			
+			/*데탑 스타일*/
+			@media screen and (min-width:801px){
+				html{
+					#header{
+						text-align:center;
+						padding-left:3%;
+						background-color:#100066;
+					}
+					
+					#header h1{
+						padding:1%;
+						margin:1%;
+						color:#fff;
+					}
+					
+					#nav{ background-color: rgb(0, 128, 255); }
+					
+					#nav ul li{
+						width:100%;
+						text-align:center;
+						color:#fff;
+						border-bottom:1px solid #fff;
+					}
+					
+					#contents{width:80%;
+							  margin:2% auto;}
+					
+					.contents_menu > div{
+						height:130px;
+						background-color: #0cf;
+						padding:15px 0 0 20px;
+						margin-bottom:3px;}
+					
+					#footer{width:100%;
+							text-align:center;}
+					
+				}/*html*/
+			}/*@media screen*/
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="stage">
+			<div id="header">
+				<h1>Media Queries</h1>
+			</div>
+			
+			<div id="nav">
+				<ul class="cf">
+					<li>menu1</li>
+					<li>menu2</li>
+					<li>menu3</li>
+				</ul>
+			</div>
+			
+			<div id="contents" class="cf">
+				<aside class="contents_menu cf">
+					<div id="contents_menu1">
+						<h1>Contents Menu1</h1>
+					</div>
+					
+					<div id="contents_menu2">
+						<h1>Contents Menu2</h1>
+					</div>
+				</aside>
+				
+				<div class="main">
+					<div id="body_link">
+						<h1>반응형 디자인</h1>
+						<p>반응형 웹 디자인을 잘 합시다</p>
+					</div>
+					
+					<div id="section_link">
+						<h1>반응형 디자인</h1>
+						<p>반응형 웹 디자인을 잘 합시다</p>
+					</div>
+					
+					<div id="article_link">
+						<h1>반응형 디자인</h1>
+						<p>반응형 웹 디자인을 잘 합시다</p>
+					</div>
+					
+					<div id="aside_link">
+						<h1>반응형 디자인</h1>
+						<p>반응형 웹 디자인을 잘 합시다</p>
+					</div>
+					
+					<div id="nav_link">
+						<h1>반응형 디자인</h1>
+						<p>반응형 웹 디자인을 잘 합시다</p>
+					</div>
+				</div>
+			</div>
+			
+			<div id="footer">
+				&copy; 2024 KH Korea
+			</div>
+			
+		</div>
+	</body>
+</html>

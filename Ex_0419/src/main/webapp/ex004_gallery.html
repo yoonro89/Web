@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			a{text-decoration:none;}
+		</style>
+		
+		<script>
+			
+			let num = 1;
+			let path = "image/img"
+			
+			function next(){
+				num++;
+				
+				if(num > 7){
+					num = 1;
+				}
+				
+				document.getElementById("gallery").src = path + num + ".jpg";
+			}
+			
+			function prev(){
+				num--;
+				
+				if(num < 1){
+					num = 7;
+				}
+				
+				document.getElementById("gallery").src = path + num + ".jpg";
+			}
+			
+			//1초 간격으로 자동으로 next()함수를 호출한다
+			setInterval("next()", 1000);
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		<div id="galleryWrap">
+			<a href="#" onclick="prev();">
+				<img src="image/left_btn.png" alt="이전버튼">
+			</a>
+			
+			<img src="image/img1.jpg" id="gallery"
+				 width:"300" height="200">
+			
+			<a href="#" onclick="next();">
+				<img src="image/right_btn.png" alt="다음버튼">
+			</a>
+		</div>
+	</body>
+</html>

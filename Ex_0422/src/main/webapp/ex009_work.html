@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			input[type=text]{border-style:none; outline:none;}
+		</style>
+		
+		<script>
+			let op_array = ["더하기(+)", "빼기(-)", "곱하기(*)", "나누기(/)"];
+			
+			window.onload = function(){
+				let op = document.getElementById("op");
+				
+				for(let i = 0; i < op_array.length; i++){
+					let newOP = document.createElement('option');
+					newOP.innerHTML = op_array[i];
+					newOP.value = op_array[i];
+					op.appendChild(newOP);
+				}
+			}
+			
+			
+			function calc(){
+				let su1 = document.getElementById("su1").value.trim();
+				let su2 = document.getElementById("su2").value.trim();
+				
+				let pat = /^[0-9]*$/;
+				
+				if( !pat.test(su1) || !pat.test(su2) || su1=='' || su2 =='' ){
+					alert("정수만 입력 가능합니다");
+					return;
+				}
+				
+				
+				let op = document.getElementById("op").value;
+				let res;
+				
+				switch(op){
+					case "더하기(+)":
+					res = Number(su1) + Number(su2);
+					break;
+					
+					case "빼기(-)":
+					res = su1 - su2;
+					break;
+					
+					case "곱하기(*)":
+					res = su1 * su2;
+					break;
+					
+					case "나누기(/)":
+					res = su1 / su2;
+					res = (su2 == 0) ? 0 : (su1/su2).toFixed(2);
+					break;
+					
+					default:
+					alert("연산자를 선택하세요.");
+					break;
+				}
+				
+				let result = document.getElementById("result");
+				result.innerHTML = "결과 : " + res;
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<form name="cal">
+			<input id="su1" size="4">
+			<input id="su2" size="4">
+			
+			<select id="op">
+				<option value="">::연산자::</option>
+			</select>
+			
+			<input type="button" value="실행" onclick="calc();"><br>
+			<br>
+			<p id="result">결과 : </p>
+		</form>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

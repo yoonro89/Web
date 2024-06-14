@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		
+		<style>
+			* {box-sizing: border-box;
+			   font-family: "Noto Sans CJK KR";
+			   font-style: normal;}
+				
+			body{display: flex;
+				 flex-direction: row;
+				 justify-content: center;
+				 background-color:aliceblue;}
+				
+			.container{
+				  padding:20px;
+				  align-items: center;
+				  width: 555px;
+				  height: 555px;
+				  margin-top: 60px;
+				  background: rgb(232, 232, 232);
+				  border: 2px solid rgb(192, 192, 192);
+				}
+				
+			.member-container{align-items: center;
+							  width: 430px;
+							  height:500px;
+							  margin-top: 50px;
+							  }
+			
+				
+			.user-info{margin-top: 5px; position:relative;}
+				
+			.user-info div{margin-top: 21px;}
+			
+			.user-info a{font-weight: 900;
+						 font-size: 25px;
+						 position:absolute;
+						 margin-left:20px;}
+				
+			.user-info input{font-weight: 400;
+							 font-size: 16px;
+							 line-height: 24px;
+							 background-color:rgb(232, 232, 232);
+							 border: none;
+							 display:inline;
+							 border-bottom: 3px dashed black;
+							 width: 230px;
+							 margin-left:250px;
+							 margin-top:4px;}
+			
+			button {border:none;
+					width: 510px;
+					height: 75px;
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 27px;
+					text-align: center;
+					color: rgb(0, 64, 0);
+					background: rgb(0, 213, 106); 
+					margin-top:35px;
+					margin-bottom:40px;}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="member-container">
+				<div class="user-info">
+					<div class="user-info-name">
+						<a>아이디</a>
+						<input type="text" />
+					</div>
+					
+					<div class="user-info-pw">
+						<a>패스워드</a>
+						<input type="password" id="pw" placeholder=
+						"영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자">
+					</div>
+					<br>
+					<br>
+					<div class="user-info-pw-check">
+						<a>패스워드 확인</a>
+						<input type="password">
+					</div>
+					
+					<div class="user-info-email">
+						<a>이메일</a>
+						<input type="email" id="email" name="email"
+						 placeholder="                   @">
+					</div>
+					
+					<div class="user-info-adress">
+						<a>주소</a>
+						<input type="text" />
+						<input type="text" />
+					</div>
+				</div><!--user-info-->
+				
+				<div class="btn">
+					<button>가입</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

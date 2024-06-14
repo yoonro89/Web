@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+		<style>
+			*{margin:0; padding:0;}
+			li{ list-style:none; }
+			
+			ul{width:130px;
+			   margin-left:10px;}
+			
+			a{display:block;
+			  text-decoration:none;
+			  background:#f30;
+			  padding:5px;
+			  margin:3px 0;
+			  color:white;}
+			
+			/* :(콜론)을 사용하는 가상클래스는 스타일에대한 처리를 바로 진행한다기 보다
+				사용자가 원하는 시점에, 원하는 상황에만 동작하도록 처리가 가능 */
+			a:hover{ font-weight:bold;
+					 background:#0c0;
+					 color:#ff0;
+					 text-decoration:underline;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<div id="box">
+			<h1>메뉴판</h1>
+			
+			<ul>
+				<li><a href="#">짜장면</a></li>
+				<li><a href="#">짬뽕</a></li>
+				<li><a href="#">탕수육</a></li>
+				<li><a href="#">볶음밥</a></li>
+			</ul>
+			
+		</div>
+	</body>
+</html>

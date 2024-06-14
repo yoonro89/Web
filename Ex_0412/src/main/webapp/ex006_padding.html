@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>padding(안쪽여백)</title>
+		
+		<style>
+			p{ border:5px solid red;
+			   background: yellow; 
+			   width:300px;}
+			   
+			.box1{padding:20px;}/*상하좌우*/
+			.box2{padding:20px 50px;}/*상하, 좌우*/
+			.box3{padding:20px 50px 30px;}/*상, 좌우, 하*/
+			.box4{padding:0 30px 50px 70px;}/*상, 우, 하, 좌 (위부터 시계방향으로지정) 그리고 0px일때만 px생략 가능*/
+			.box5{padding-left:20px;
+				  padding-top:10px;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<p class="box1">padding 연습중</p>
+		<p class="box2">padding 연습중</p>
+		<p class="box3">padding 연습중</p>
+		<p class="box4">padding 연습중</p>
+		<p class="box5">padding 연습중</p>
+	</body>
+</html>
